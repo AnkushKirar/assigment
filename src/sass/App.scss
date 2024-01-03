@@ -1,0 +1,155 @@
+
+@mixin FlexProp($direction,$justify-content,$align-item){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-item;
+}
+.html{
+    font-size: 16px;
+}
+.Main_div{
+margin: 0;
+background-image: url("../assets/64ad5ff99cd8a851dddb67e2_5e9875de8eedd8ebd1a6c3f6_s3-images-original-priscilla-du-preez-dlxLGIy-2VU-unsplash--2x1--1280.jpeg");
+width: 100vw;
+height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+overflow-x: hidden;
+}
+.Super_conatiner{
+    @include FlexProp(column, flex-start, center);
+    margin-top:0rem
+}
+.search_bar_container{
+    @include FlexProp(row, space-between,center);
+    margin-top: 12rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
+    background-color: white;
+    border: .15rem solid transparent;
+    border-radius: 1rem;
+    width: 40rem;
+    text-align: center;
+    align-self: center;
+}
+.side_bar{
+    padding: 1rem;
+}
+.side_bar_element{
+    display: flex;
+    flex-direction: column;
+}
+.search_filed{
+    border: 2px solid transparent;
+    height: 90%;
+    width: 95%;
+    &:focus{
+        border: 2px solid transparent;
+    }
+}
+#img{
+    height: 2.5rem;
+    width: 4rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+.Search_result_Container{
+    @include FlexProp(row, space-between, flex-start);
+}
+.rating_div{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.card{
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-color: rgb(235, 232, 227);
+    width: 10rem;
+    padding: 0rem;
+    margin: .5rem;
+}
+.Search_item_Container{
+
+    @include FlexProp(row, Space-around, center);
+    flex-wrap: wrap;
+    width: 70%;
+}
+.img_search{
+    height: 10rem;
+    text-align: end;
+    padding: 0rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    border: 2px solid transparent;
+ }
+.Item_name{
+    text-align: center
+}
+.Price_tag{
+    @include FlexProp(row, space-around, center);
+    margin: 0;
+    height: 1rem;
+}
+.Old_Price{
+    font-weight: 200;
+    text-decoration: line-through;
+    opacity: .6;
+}
+.New_Price{
+    color: rgb(10, 10, 224);
+    font-weight: 800;
+    font-size: larger;
+}
+.Rating{
+    @include FlexProp(row, space-around, center);
+    margin: 0;
+}
+.heart_icon{
+   margin: .5rem;
+}
+.true_View_product{
+    opacity: 1;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgb(72, 72, 202) 11%, rgba(0,212,255,1) 100%);    text-align: center;
+    padding: .7rem;
+    margin-top: 3rem;
+}
+.false_View_product{
+    opacity: 0;
+}
+.search_bar_container_main{
+    @include FlexProp(row, space-between,center);
+    margin-top: 6rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
+    background-color: white;
+    border: .15rem solid black;
+    border-radius: 1rem;
+    width: 40rem;
+    text-align: center;
+    align-self: center;}
+.suggest_container{
+    background-color: rgb(233, 244, 240);
+    border-radius: 1rem;
+    
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: .5rem;
+}
+.suggest_Menu_div{
+@include FlexProp(row, space-around, center);
+flex-wrap: wrap;
+}
+
+@media only screen and (width <675px) {
+    html{
+        font-size: 10px;
+    }
+    
+}
+
+   
