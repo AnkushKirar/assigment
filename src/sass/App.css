@@ -58,9 +58,9 @@
 #img {
   height: 2.5rem;
   width: 4rem;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 80rem;
 }
 
 .Search_result_Container {
@@ -172,6 +172,8 @@
 .suggest_container {
   background-color: rgb(233, 244, 240);
   border-radius: 1rem;
+  height: -moz-min-content;
+  height: min-content;
   margin-left: 10rem;
   margin-right: 10rem;
   padding: 0.5rem;
@@ -185,8 +187,21 @@
   flex-wrap: wrap;
 }
 
+@media only screen and (width < 1050px) {
+  #img {
+    margin-left: 40rem;
+  }
+}
+@media only screen and (width < 1275px) {
+  #img {
+    margin-left: 50rem;
+  }
+}
 @media only screen and (width < 675px) {
   html {
     font-size: 10px;
+  }
+  #img {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=App.css.map */

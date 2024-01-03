@@ -52,9 +52,9 @@ overflow-x: hidden;
 #img{
     height: 2.5rem;
     width: 4rem;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+    position: relative;
+   margin-top: 2rem;
+    margin-left: 80rem;
 }
 .Search_result_Container{
     @include FlexProp(row, space-between, flex-start);
@@ -135,7 +135,7 @@ overflow-x: hidden;
 .suggest_container{
     background-color: rgb(233, 244, 240);
     border-radius: 1rem;
-    
+    height: min-content;
     margin-left: 10rem;
     margin-right: 10rem;
     padding: .5rem;
@@ -144,10 +144,23 @@ overflow-x: hidden;
 @include FlexProp(row, space-around, center);
 flex-wrap: wrap;
 }
+@media only screen and (width<1050px){
+    #img{
+        margin-left: 40rem;
+    }
+}
+@media only screen and (width<1275px){
+    #img{
+        margin-left: 50rem;
+    }
+}
 
 @media only screen and (width <675px) {
     html{
         font-size: 10px;
+    }
+    #img{
+        margin-left: 0;
     }
     
 }
