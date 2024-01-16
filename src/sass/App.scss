@@ -108,9 +108,16 @@ overflow-x: hidden;
     @include FlexProp(row, space-around, center);
     margin: 0;
 }
-.heart_icon{
-   margin: .5rem;
+.Home_Icon{
+    margin-left: 1rem;
+    margin-top: .5rem;
+    color: black;
+    width: 1rem;
+    height: max-content;
+   
+
 }
+// tyle={{marginLeft:"1rem",marginTop:".3rem",color:"black",display:"inline",width:}}
 .true_View_product{
     opacity: 1;
     background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgb(72, 72, 202) 11%, rgba(0,212,255,1) 100%);    text-align: center;

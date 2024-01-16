@@ -1,4 +1,5 @@
 import React ,{useState,useEffect} from 'react'
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
@@ -36,7 +37,7 @@ const Search = () => {
     <img src= "https://uploads-ssl.webflow.com/622778f0460ef2a7b46117c1/62277b0ea97763788d756b0b_ZEVI-GG-LogoDesogn%20-Option-2-Black.png" alt="logo"  id='img'/>
     <div className="search_bar_container">
       <input type="text" className="search_filed" placeholder="Search..."   onFocus={()=>setView(true)}  onBlur={()=>setView(false)}/>
-      <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
+     <Link to = '/Menu'><FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" /></Link>
     </div>
     </div>
   {view?(<>
